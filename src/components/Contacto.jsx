@@ -100,7 +100,7 @@ function Contacto({ t }) {
               >
                 <input type="hidden" name="_subject" value="Nuevo contacto desde portfolio" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://francoquinteros.dev/gracias" />
+                <input type="hidden" name="_next" value="https://portfoliofrancoquinteros-cyan-pi-vqfcq2g7qp.vercel.app/gracias" />
 
                 <div>
                   <label className="text-xs uppercase tracking-widest mb-2 block" style={{ color: "var(--text-dim)" }}>
