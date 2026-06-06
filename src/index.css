@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* { cursor: none !important; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+  25% { transform: translateY(-20px) translateX(10px); opacity: 0.6; }
+  50% { transform: translateY(-10px) translateX(-10px); opacity: 0.4; }
+  75% { transform: translateY(-25px) translateX(5px); opacity: 0.7; }
+}
+
+/* MODO OSCURO — default */
+:root {
+  --bg: #0a0a0a;
+  --bg-secondary: #18181b;
+  --bg-card: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.1);
+  --text: #ffffff;
+  --text-muted: rgba(255,255,255,0.6);
+  --text-dim: rgba(255,255,255,0.3);
+}
+
+/* MODO CLARO */
+:root.light {
+  --bg: #f1f5f9;
+  --bg-secondary: #e2e8f0;
+  --bg-card: rgba(255,255,255,0.8);
+  --border: rgba(0,0,0,0.08);
+  --text: #0f172a;
+  --text-muted: rgba(15,23,42,0.7);
+  --text-dim: rgba(15,23,42,0.4);
+}
+
+/* Aplicar variables globalmente */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Cards en modo claro */
+:root.light .bg-white\/5 {
+  background: var(--bg-card) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Textos en modo claro */
+:root.light .text-white {
+  color: var(--text) !important;
+}
+:root.light .text-white\/60,
+:root.light .text-white\/50,
+:root.light .text-white\/40 {
+  color: var(--text-muted) !important;
+}
+:root.light .text-white\/30,
+:root.light .text-white\/20 {
+  color: var(--text-dim) !important;
+}
+
+/* Fondos en modo claro */
+:root.light .bg-zinc-950\/50,
+:root.light .bg-black\/40 {
+  background: var(--bg-secondary) !important;
+}
+
+/* Navbar en modo claro */
+:root.light nav {
+  background: rgba(241,245,249,0.95) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+/* :root.light nav a {
+  color: var(--text-muted) !important;
+} */
+
+/* Borders en modo claro */
+:root.light .border-white\/10,
+:root.light .border-white\/20 {
+  border-color: var(--border) !important;
+}
+
+/* Servicios en modo claro */
+:root.light #servicios {
+  background: var(--bg-secondary) !important;
+}
+
+/* Footer en modo claro */
+:root.light footer {
+  border-color: var(--border) !important;
+}
+
+/* Tema destacado en proyectos */
+:root.light .bg-black\/95 {
+  background: rgba(241,245,249,0.95) !important;
+}
+
+/* Proyectos en modo claro */
+:root.light .bg-white\/5 {
+  background: white !important;
+}
+
+/* Sección Sobre mi */
+:root.light #sobre-mi {
+  background: var(--bg) !important;
+}
+/* :root.light #sobre-mi * {
+  color: var(--text) !important;
+} */
+
+/* Proyectos */
+:root.light #proyectos {
+  background: var(--bg) !important;
+}
+:root.light #proyectos .text-white\/60,
+:root.light #proyectos .text-white\/50,
+:root.light #proyectos .text-white\/40 {
+  color: var(--text-muted) !important;
+}
+/* :root.light #proyectos .text-white {
+  color: var(--text) !important;
+} */
+:root.light #proyectos .text-white\/5 {
+  color: var(--text-dim) !important;
+}
+
+/* Tema destacado negro en proyectos */
+:root.light #proyectos > div {
+  background: var(--bg) !important;
+}
+
+/* Contacto */
+:root.light #contacto input,
+:root.light #contacto textarea {
+  background: white !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+:root.light #contacto input::placeholder,
+:root.light #contacto textarea::placeholder {
+  color: var(--text-dim) !important;
+}
+
+/* Footer en modo claro */
+:root.light footer {
+  background: var(--bg) !important;
+  border-color: var(--border) !important;
+}
+
+:root.light footer .text-white {
+  color: var(--text) !important;
+}
+
+:root.light footer .text-white\/30,
+:root.light footer .text-white\/20 {
+  color: var(--text-dim) !important;
+}
+
+:root.light footer .text-blue-500 {
+  color: #2563eb !important;
+}
+
+:root.light footer h3 {
+  color: var(--text) !important;
+}
+
+:root.light footer a {
+  color: var(--text-dim) !important;
+}
+
+:root.light footer a:hover {
+  color: var(--text) !important;
+}
+
+:root.light footer .border-t {
+  border-color: var(--border) !important;
+}
+
+:root.light footer .bg-blue-600 {
+  background: #2563eb !important;
+  color: white !important;
+}
+
+/* Botones azules — mantener texto blanco en modo claro */
+:root.light .bg-blue-600,
+:root.light .bg-blue-700,
+:root.light .hover\:bg-blue-700 {
+  color: white !important;
+}
+
+:root.light a.bg-blue-600,
+:root.light button.bg-blue-600 {
+  color: white !important;
+}
+
+@keyframes gradiente {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.texto-gradiente {
+  background: linear-gradient(270deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6);
+  background-size: 300% 300%;
+  animation: gradiente 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
