@@ -51,7 +51,7 @@ function Navbar({ t, lang, toggleLang }) {
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
 
         <a href="#inicio" className="font-bold text-lg tracking-tight text-white no-underline">
-          Franco<span className="text-blue-500">.</span>
+          FQ<span className="text-blue-500">.</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">

@@ -6,7 +6,7 @@ function Footer({ t }) {
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-6">
 
           <span className="font-bold" style={{ color: "var(--text)" }}>
-            Franco<span className="text-blue-500">.</span>
+            FQ<span className="text-blue-500">.</span>
           </span>
 
           <span className="text-sm" style={{ color: "var(--text-dim)" }}>
