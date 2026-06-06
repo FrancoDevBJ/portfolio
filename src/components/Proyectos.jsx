@@ -61,7 +61,7 @@ function Proyectos({ t }) {
                     <span className="text-xs ml-2" style={{ color: "var(--text-dim)" }}>canalnorte.com</span>
                   </div>
                   <div className="h-48 overflow-hidden">
-                    <img src="public/portal.png" alt="Portal de Noticias" className="w-full h-full object-cover object-top" />
+                    <img src="/portal.png" alt="Portal de Noticias" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
               </div>
@@ -112,7 +112,7 @@ function Proyectos({ t }) {
                     <span className="text-xs ml-2" style={{ color: "var(--text-dim)" }}>rolling-music.vercel.app</span>
                   </div>
                   <div className="h-48 overflow-hidden">
-                    <img src="public/rolling.png" alt="Rolling Music" className="w-full h-full object-cover object-top" />
+                    <img src="/rolling.png" alt="Rolling Music" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
               </div>
