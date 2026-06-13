@@ -5,7 +5,7 @@ function Footer({ t }) {
       <div style={{ borderTop: "1px solid var(--border)" }} className="py-6">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-6">
 
-          <img src="/public/logo-dev.png" alt="logo" className="size-8 brightness-75 saturate-200 hue-rotate-60"/>
+          <img src="/logo-dev.png" alt="logo" className="size-8 brightness-75 saturate-200 hue-rotate-60"/>
 
           <span className="text-sm" style={{ color: "var(--text-dim)" }}>
             2026 © {t ? t.footerDerechos : "Todos los derechos reservados"}

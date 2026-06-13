@@ -50,7 +50,7 @@ function Navbar({ t, lang, toggleLang }) {
 
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
 
-        <img src="/public/logo-dev.png" alt="logo" className="size-10 brightness-75 saturate-200 hue-rotate-60"/>
+        <img src="/logo-dev.png" alt="logo" className="size-10 brightness-75 saturate-200 hue-rotate-60"/>
 
         <div className="hidden md:flex items-center gap-8">
           <a href="#inicio"      className={activa === "inicio"      ? linkActivo : linkNormal}>{labels.inicio}</a>
