@@ -208,3 +208,34 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.email-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el email y el botón */
+  font-family: Arial, sans-serif;
+}
+
+#btn-copiar {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s;
+}
+
+#btn-copiar:hover {
+  background-color: #e9e9e9;
+}
+
+#mensaje-alerta {
+  color: green;
+  font-size: 14px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.mensaje-oculto {
+  opacity: 0 !important;
+}

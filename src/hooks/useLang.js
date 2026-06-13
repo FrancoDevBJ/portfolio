@@ -82,6 +82,9 @@ export const textos = {
     contameProyecto: "Contame sobre tu proyecto...",
     enviarMensaje: "Enviar mensaje",
     respondo: "Respondo en menos de 24hs",
+    copiar: "Copiar",
+    enviar: "Enviar email",
+
 
     // Footer
     footerCTA: "Tenés un proyecto?",
@@ -170,6 +173,8 @@ export const textos = {
     contameProyecto: "Tell me about your project...",
     enviarMensaje: "Send message",
     respondo: "I respond within 24 hours",
+    copiar: "Copy",
+    enviar: "Send email",
 
     // Footer
     footerCTA: "Have a project?",

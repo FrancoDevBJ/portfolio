@@ -27,21 +27,76 @@ function Contacto({ t }) {
 
             <div className="flex flex-col gap-4">
 
-              <a href="mailto:fquinteros.dev@gmail.com"
-                 className="group rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 no-underline"
-                 style={cardStyle}>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
-                    📧
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--text-dim)" }}>Email</div>
-                    <div className="font-medium group-hover:text-blue-400 transition-colors" style={{ color: "var(--text)" }}>
-                      fquinteros.dev@gmail.com
-                    </div>
-                  </div>
-                </div>
-              </a>
+              <div className="group rounded-2xl p-6 transition-all duration-300" style={cardStyle}>
+  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+    
+    <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+      <div style={{ width: 48, height: 48, background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>
+        📧
+      </div>
+      <div>
+        <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 4, color: "var(--text-dim)" }}>Email</div>
+        <div style={{ fontWeight: 500, color: "var(--text)", fontSize: 14 }}>fquinteros.dev@gmail.com</div>
+      </div>
+    </div>
+
+    <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
+      <button
+        id="btnCopiarEmail"
+        onClick={() => {
+          navigator.clipboard.writeText("fquinteros.dev@gmail.com")
+          const btn = document.getElementById("btnCopiarEmail")
+          btn.innerHTML = '<i class="fa-solid fa-check"></i>'
+          btn.style.background = "#16a34a"
+          btn.style.borderColor = "#16a34a"
+          setTimeout(() => {
+            btn.innerHTML = '<i class="fa-regular fa-copy"></i>'
+            btn.style.background = ""
+            btn.style.borderColor = ""
+          }, 2000)
+        }}
+        style={{
+          width: 36,
+          height: 36,
+          borderRadius: 8,
+          background: "var(--bg-card)",
+          border: "1px solid var(--border)",
+          color: "var(--text-muted)",
+          cursor: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: 14,
+          transition: "all 0.2s",
+        }}
+        title={t ? t.copiar : "Copiar"}
+      >
+        <i className="fa-regular fa-copy"></i>
+      </button>
+      
+      <a href="https://mail.google.com/mail/?view=cm&to=fquinteros.dev@gmail.com&su=Contacto desde portfolio"
+        target="_blank"
+        style={{
+          width: 36,
+          height: 36,
+          borderRadius: 8,
+          background: "var(--bg-card)",
+          color: "var(--text-muted)",
+          textDecoration: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: 14,
+          flexShrink: 0,
+        }}
+        title={t ? t.enviar : "Enviar email"}
+      >
+        <i className="fa-solid fa-paper-plane"></i>
+      </a>
+    </div>
+
+  </div>
+</div>
 
               <a href="https://www.linkedin.com/in/franco-quinteros-dev" target="_blank"
                  className="group rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 no-underline"
@@ -58,7 +113,7 @@ function Contacto({ t }) {
                   </div>
                 </div>
               </a>
-
+              
               <a href="https://github.com/FrancoDevBJ" target="_blank"
                  className="group rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 no-underline"
                  style={cardStyle}>

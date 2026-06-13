@@ -106,7 +106,8 @@ function Hero({ t }) {
              title="LinkedIn">
             <i className="fa-brands fa-linkedin"></i>
           </a>
-          <a href="mailto:fquinteros.dev@gmail.com"
+          <a href="https://mail.google.com/mail/?view=cm&to=fquinteros.dev@gmail.com&su=Contacto desde portfolio"
+              target="_blank"
              className="transition-colors no-underline hover:text-blue-400 text-2xl"
              style={{ color: "var(--text-dim)" }}
              title="Email">
